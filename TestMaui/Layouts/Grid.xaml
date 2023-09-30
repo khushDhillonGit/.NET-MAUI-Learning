@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestMaui.GridPage"
+             Padding="0,20,0,0"
+             Title="Grid">
+    
+    <Grid BackgroundColor="Red" RowDefinitions="0.5*,0.5*" ColumnDefinitions="0.5*,0.5*" ColumnSpacing="10" RowSpacing="10">
+        <Label Grid.Row="0" Grid.Column="0" Text="L1" Background="silver"></Label>
+        <Label Grid.Row="0" Grid.Column="1" Text="L2" Background="silver"></Label>
+        <Label Grid.Row="1" Grid.Column="0" Text="L3" Background="silver"></Label>
+        <Label Grid.Row="1" Grid.Column="1" Text="L4" Background="silver"></Label>
+    </Grid>
+</ContentPage>

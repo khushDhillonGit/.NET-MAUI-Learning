@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestMaui.AbsoluteEx"
+             Title="AbsoluteEx">
+    <!--<AbsoluteLayout>
+        <BoxView Color="#f7f7f7" AbsoluteLayout.LayoutBounds="0,0,1,0.33" AbsoluteLayout.LayoutFlags="All"></BoxView>
+        <StackLayout AbsoluteLayout.LayoutBounds="0.5,0.1,1,0.33" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="Center">
+            <Label Text="$11.95" TextColor="#33353a" FontAttributes="Bold" FontSize="60"></Label>
+            <Button BackgroundColor="#1695A3" HeightRequest="30" Padding="0" FontSize="15" CornerRadius="15" FontAttributes="Bold" Text="Add $7.99 Credit"></Button>
+        </StackLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,0.62
+                     " AbsoluteLayout.LayoutFlags="All" Spacing="20" Padding="50,0">
+            <Label Text="Why pay for credit" HorizontalTextAlignment="Center" FontSize="16" FontAttributes="Bold"></Label>
+            <Label Text="Because you can reach people who aren't on SkyApp by calling mobile and landline numbers, or spending SMS." FontSize="13" HorizontalTextAlignment="Center">
+            </Label>
+        </StackLayout>
+    </AbsoluteLayout>-->
+
+    <AbsoluteLayout>
+        <Image Source="bg.png" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"></Image>
+        <BoxView Color="Blue" AbsoluteLayout.LayoutBounds="0,1,1,100" Opacity="0.5" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"></BoxView>
+        <StackLayout Orientation="Horizontal" Padding="30,0" AbsoluteLayout.LayoutBounds="0,1,1,100" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" VerticalOptions="Center" HorizontalOptions="Center" Spacing="50">
+            <Label Text="Profile" TextColor="White" FontSize="15" ></Label>
+            <Label Text="Meditate" TextColor="White" FontSize="15"></Label>
+            <Label Text="Themes" TextColor="White" FontSize="15"></Label>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

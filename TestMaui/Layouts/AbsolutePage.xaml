@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestMaui.AbsolutePage"
+             Title="AbsolutePage">
+
+    <!--<AbsoluteLayout>
+        <BoxView Color="Red" AbsoluteLayout.LayoutBounds="0,0 ,1,1" AbsoluteLayout.LayoutFlags="All"></BoxView>
+        <BoxView Color="White"  AbsoluteLayout.LayoutBounds="0.5,0.1,100,100" AbsoluteLayout.LayoutFlags="PositionProportional"></BoxView>
+        <Button Text="Heloo" Background="silver" CornerRadius="0" TextColor="White" AbsoluteLayout.LayoutBounds="0,1,1,0.1" AbsoluteLayout.LayoutFlags="All"></Button>
+    </AbsoluteLayout>-->
+</ContentPage>

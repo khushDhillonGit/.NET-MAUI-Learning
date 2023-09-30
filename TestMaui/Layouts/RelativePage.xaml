@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rel="clr-namespace:Microsoft.Maui.Controls.Compatibility;assembly=Microsoft.Maui.Controls"
+             x:Class="TestMaui.RelativePage"
+             Title="RelativePage">
+
+    <rel:RelativeLayout>
+        <BoxView Color="Aqua"
+                 rel:RelativeLayout.WidthConstraint="{rel:ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                 rel:RelativeLayout.HeightConstraint="{rel:ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}"
+                 ></BoxView>
+    </rel:RelativeLayout>
+</ContentPage>
