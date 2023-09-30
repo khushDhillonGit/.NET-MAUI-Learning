@@ -3,12 +3,12 @@
     x:Class="TestMaui.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:TestMaui"
+    xmlns:local="clr-namespace:TestMaui.Images"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:RelativePage}"
-        Route="RelativePage" />
+        ContentTemplate="{DataTemplate local:EmbeddedImages}"
+        Route="EmbeddedImages" />
 
 </Shell>
