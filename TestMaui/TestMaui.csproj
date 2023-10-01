@@ -49,10 +49,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiImage Remove="Resources\Images\bg.png" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <None Remove="Resources\Images\add.png" />
 	  <None Remove="Resources\Images\bg.png" />
 	  <None Remove="Resources\Images\cloudiness.png" />
@@ -72,14 +68,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Include="Resources\Images\bg.png" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Images\EmbeddedImages.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Images\Image.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Images\ImageEx.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Layouts\AbsoluteEx.xaml">

@@ -5,6 +5,12 @@
     x:Class="TestMaui.MainPage">
 
     <StackLayout BindingContext="{x:Reference slider}" VerticalOptions="Center" HorizontalOptions="Center">
+        <StackLayout.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="0,20,0,0"></On>
+                <On Platform="Android" Value="0"></On>
+            </OnPlatform>
+        </StackLayout.Padding>
         <BoxView
             Color="Green"
             Opacity="{Binding Value}"

@@ -8,7 +8,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:EmbeddedImages}"
-        Route="EmbeddedImages" />
+        ContentTemplate="{DataTemplate local:ImageEx}"
+        Route="ImageEx" />
 
 </Shell>
