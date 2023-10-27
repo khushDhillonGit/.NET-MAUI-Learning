@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestMaui.Netflix.SearchMovie"
+             Title="Movies">
+    <VerticalStackLayout>
+        <SearchBar Placeholder="Search by movie name" TextChanged="SearchBar_TextChanged"></SearchBar>
+        <ActivityIndicator IsRunning="{Binding IsSearching}"></ActivityIndicator>
+        <ListView x:Name="movieList" ItemSelected="ListView_ItemSelected" CachingStrategy="RecycleElementAndDataTemplate">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <HorizontalStackLayout>
+                            <Image Source="{Binding Image}"></Image>
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Name}"></Label>
+                                <Label Text="{Binding Year}"></Label>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>

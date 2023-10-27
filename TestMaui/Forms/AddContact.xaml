@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestMaui.Forms.AddContact"
+             Title="AddContact">
+    <TableView Intent="Form">
+        <TableView.Root>
+            <TableRoot>
+                <TableSection Title="Name">
+                    <EntryCell Label="First name" Text="{Binding FirstName}"></EntryCell>
+                    <EntryCell Label="Last name" Text="{Binding LastName}"></EntryCell>
+                </TableSection>
+                <TableSection Title="Contact">
+                    <EntryCell Label="Phone" Text="{Binding Phone}"></EntryCell>
+                    <EntryCell Label="Email" Text="{Binding Email}"></EntryCell>
+                </TableSection>
+                <TableSection Title="Other">
+                    <SwitchCell Text="Blocked" On="{Binding IsBlocked}"></SwitchCell>
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <Button Text="Save" Clicked="Button_Clicked" CommandParameter="{Binding .}" x:Name="saveButton"></Button>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView.Root>
+    </TableView>
+</ContentPage>
