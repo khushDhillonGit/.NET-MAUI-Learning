@@ -6,28 +6,21 @@ namespace TestMaui.MVVM;
 
 public partial class PlaylistsPage : ContentPage
 {
-  
-
     public PlaylistsPage ()
     {
         InitializeComponent ();
+        ViewModel = new PlaylistsViewModel (new PageService());
     }
 
     protected override void OnAppearing ()
     {
-        BindingContext = new PlaylistsViewModel();
-        base.OnAppearing ();
-    }
-
-    void OnAddPlaylist (object sender, System.EventArgs e)
-    {
-        (BindingContext as PlaylistsViewModel).AddPlaylist();
+        base.OnAppearing();
     }
 
     void OnPlaylistSelected (object sender, SelectedItemChangedEventArgs e)
     {
-
-        (BindingContext as PlaylistsViewModel).SelectPlaylist(e.SelectedItem as PlaylistViewModel);
-        
+       ViewModel.SelectPlaylistCommand.Execute(e.SelectedItem);
     }
+
+    private PlaylistsViewModel ViewModel { get { return BindingContext as PlaylistsViewModel;  } set { BindingContext = value;  } }
 }

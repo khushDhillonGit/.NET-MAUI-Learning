@@ -2,6 +2,7 @@
 using TestMaui.Data;
 using TestMaui.Netflix;
 using TestMaui.Services;
+using TestMaui.ViewModels;
 using Contact = TestMaui.Forms.Contact;
 namespace TestMaui;
 
@@ -18,7 +19,10 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 		builder.Services.AddTransient<IMovieApIService, MovieApIService>();
+		builder.Services.AddSingleton<IPageService, PageService>();
+		builder.Services.AddSingleton<PlaylistsViewModel>();
 		builder.Services.AddSingleton<ISQLiteDb ,SQLiteDb>();
+		builder.Services.AddSingleton<ContactsViewModel>();
 		builder.Services.AddSingleton<Contact>();
 		builder.Services.AddSingleton<SearchMovie>();
 		return builder.Build();

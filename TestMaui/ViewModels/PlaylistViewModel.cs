@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using Color = System.Drawing.Color;
 
 namespace TestMaui.ViewModels
 {
@@ -17,11 +14,11 @@ namespace TestMaui.ViewModels
             set
             {
                 SetValue<bool>(ref _isFavorite, value);
-                OnPropertyChanged(nameof(Colour));
+                OnPropertyChanged(nameof(Color));
             }
         }
 
-        public Color Colour
+        public Color Color
         {
             get { return IsFavorite ? Color.Red : Color.Black; }
         }

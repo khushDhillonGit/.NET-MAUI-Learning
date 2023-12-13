@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using TestMaui.Models;
+using TestMaui.ViewModels;
 
 namespace TestMaui.MVVM;
 
 public partial class PlaylistDetailPage : ContentPage
 {
-    private Playlist _playlist; 
+    private PlaylistViewModel _playlist; 
 
-    public PlaylistDetailPage (Playlist playlist)
+    public PlaylistDetailPage (PlaylistViewModel playlist)
     {
         _playlist = playlist; 
         

@@ -4,7 +4,7 @@
              x:Class="TestMaui.MVVM.PlaylistsPage" Title="{Binding Path=Plalists.Count, StringFormat='{0} Playlists'}">
 
 	<ContentPage.ToolbarItems>
-		<ToolbarItem Text="Add" Clicked="OnAddPlaylist" />
+		<ToolbarItem Text="Add" Command="{Binding AddPlaylistCommand}"/>
 	</ContentPage.ToolbarItems>
 
     <ListView  SelectedItem="{Binding SelectedPlayList, Mode=TwoWay}" ItemsSource="{Binding Playlists}" ItemSelected="OnPlaylistSelected">
@@ -12,10 +12,8 @@
             <DataTemplate>
                 <TextCell Text="{Binding Title}" 
                           Detail="{Binding IsFavorite, StringFormat='Favorite: {0}'}"
-                            TextColor="{Binding Colour}">
+                            TextColor="{Binding Color}">
                 </TextCell>
-				
-				TextCell/>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

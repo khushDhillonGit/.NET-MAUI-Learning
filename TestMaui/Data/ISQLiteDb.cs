@@ -2,12 +2,15 @@
 using SQLite;
 using System.Reflection;
 using TestMaui.Data;
+using TestMaui.Forms;
 
 namespace TestMaui.Data
 {
     public interface ISQLiteDb
     {
-        SQLiteAsyncConnection GetConnection();
+        Task AddContactAsync(ContactM contact);
+        Task UpdateContactAsync(ContactM contact);
+        Task<List<ContactM>> GetAllContacts();
     }
     
     public class SQLiteDb : ISQLiteDb
@@ -20,10 +23,28 @@ namespace TestMaui.Data
            // enable multi-threaded database access
            SQLite.SQLiteOpenFlags.SharedCache;
 
-        public SQLiteAsyncConnection GetConnection()
+        private SQLiteAsyncConnection _connection;
+
+        public SQLiteDb() 
         {
             var database = Path.Combine(FileSystem.AppDataDirectory,"SQLite.db3");
-            return new SQLiteAsyncConnection(database,Flags);
+            _connection = new SQLiteAsyncConnection(database,Flags);
+        }
+
+        public async Task AddContactAsync(ContactM contact)
+        {
+            await _connection.InsertAsync(contact);
+        }
+
+        public async Task<List<ContactM>> GetAllContacts()
+        {
+            var contacts = await _connection.Table<ContactM>().ToListAsync();
+            return contacts;
+        }
+
+        public async Task UpdateContactAsync(ContactM contact)
+        {
+            await _connection.UpdateAsync(contact);
         }
     }
 

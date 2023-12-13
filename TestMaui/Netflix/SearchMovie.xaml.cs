@@ -24,7 +24,7 @@ public partial class SearchMovie : ContentPage
     {
         InitializeComponent();
         _movieApIService = movieApIService;
-        _connection = sQLiteDb.GetConnection();
+        //_connection = sQLiteDb.GetConnection();
         BindingContext = this;
     }
 

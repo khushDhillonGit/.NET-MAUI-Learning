@@ -3,11 +3,11 @@
     x:Class="TestMaui.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:TestMaui.MVVM"
+    xmlns:local="clr-namespace:TestMaui.Forms"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:PlaylistsPage}"
-        Route="PlaylistsPage" />
+        ContentTemplate="{DataTemplate local:Contact}"
+        Route="Contact" />
 </Shell>

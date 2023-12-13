@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestMaui.NewPage2"
+             Title="NewPage2">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--will set to all buttons-->
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Red"></Setter>
+                <Setter Property="CornerRadius" Value="20"></Setter>
+            </Style>
+            <!--will apply only if used-->
+            <Style x:Key="Button" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Red"></Setter>
+                <Setter Property="CornerRadius" Value="20"></Setter>
+            </Style>
+            <Style x:Key="PButton" TargetType="Button" BasedOn="{StaticResource Button}">
+                <Setter Property="BackgroundColor" Value="Green"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+        
+        
+    <VerticalStackLayout>
+        <Button Text="login" BackgroundColor="Gray" TextColor="White" CornerRadius="{StaticResource borderRadius}"></Button>
+        <Button Text="register" BackgroundColor="Gray" TextColor="White" CornerRadius="{StaticResource borderRadius}"></Button>
+    </VerticalStackLayout>
+</ContentPage>

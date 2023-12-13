@@ -9,6 +9,9 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:Int32 x:Key="borderRadius">20</x:Int32>
+            </ResourceDictionary>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

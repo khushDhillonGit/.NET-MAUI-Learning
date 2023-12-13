@@ -19,7 +19,7 @@
                 </TableSection>
                 <TableSection>
                     <ViewCell>
-                        <Button Text="Save" Clicked="Button_Clicked" CommandParameter="{Binding .}" x:Name="saveButton"></Button>
+                        <Button Text="Save" CommandParameter="{Binding .}" x:Name="saveButton"></Button>
                     </ViewCell>
                 </TableSection>
             </TableRoot>

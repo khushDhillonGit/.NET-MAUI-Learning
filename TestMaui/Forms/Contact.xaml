@@ -4,10 +4,10 @@
              x:Class="TestMaui.Forms.Contact"
              Title="Contact">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem Text="Add" Command="{Binding AddButtonCommand}"></ToolbarItem>
     </ContentPage.ToolbarItems>
     
-    <ListView x:Name="ContactList" ItemSelected="ContactList_ItemSelected">
+    <ListView ItemsSource="{Binding Contacts}" ItemSelected="ContactList_ItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding FullName}"></TextCell>
